@@ -1,0 +1,143 @@
+/* .one {
+    color: green;
+    } */
+body {
+  /* font-family: "Courier New", Courier, monospace; */
+  /* c: aqua; */
+  /* direction: rtl; */
+  /* height: 100vh; */
+  background-color: aqua;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.parent {
+  height: 300px;
+  background-color: #a52a2a;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  top: 20px;
+  /* align-content: space-between; */
+
+  /* height: 100vh;  */
+  /* flex-direction: column; */
+}
+.child {
+  /* margin: auto; */
+  /* width: 300px; */
+  width: 33%;
+  /* padding: 20px; */
+  /* display: inblock; */
+  /* color: red; */
+  /* border-color: black;
+  border-width: 2px; */
+  /* border: 2px green solid; */
+  background-color: brown;
+  /* padding: 50px; */
+  /* margin: auto; */
+}
+.hidden {
+  /* display: none; */
+  /* visibility: hidden; */
+  /* opacity: 0.5; */
+  /* background-color: rgba(255, 0, 0, 0.5); */
+}
+.one {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* z-index: 99; */
+  background-color: #a52a2a;
+  /* border: 5px solid;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  background-image: url(Imgs/doctor-1.jpg); */
+  /*box-shadow: 10px 10px 10px;
+  */
+  /*background-image: url(Imgs/Dark\ Green\ Modern\ Gradient\ Wave\ Linktree\ Background.png);
+  */ /*object-fit: contain;
+  */ /*background-attachment: fixed;
+  /* *
+  
+  /* background-size: cover; */
+  /*background-repeat: no-repeat;
+  */ /*background-position: center;
+  */ /*background-color: red;
+  */ /*-webkit-filter: ;
+  */
+}
+.two {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ab8383;
+}
+.three {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #c77948;
+  /* cursor: pointer; */
+}
+.three::before {
+  content: "";
+
+  /* background-color: #2d2b2a; */
+}
+/* .container {
+  background-image: url(Imgs/gallery-1.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-color: #ab8383;
+  animation: 5s slider infinite reverse;
+
+  -webkit-animation: 5s slider infinite reverse;
+} */
+/* @keyframes slider {
+  0% {
+    background-image: url(Imgs/Dark\ Green\ Modern\ Gradient\ Wave\ Linktree\ Background.png);
+  }
+  50% {
+    background-image: url(Imgs/7410689a5940f31fc7e7589ca508b297.jpg);
+  }
+  100% {
+    background-image: url(Imgs/257fa295a43fc66db683a469051ad31c.png);
+  }
+} */
+/* @media (max-width: 576px) {
+  /* h1 {
+    background-color: red;
+  }
+} */
+*/ .container {
+  width: 200px;
+  height: 200px;
+  background-color: #ab8383;
+  transition: 2s transform;
+  -webkit-transition: 2s transform;
+  -moz-transition: 2s transform;
+  -ms-transition: 2s transform;
+  -o-transition: 2s transform;
+}
+.container:hover {
+  transform: scaleZ(1.5);
+
+  /*width: 500px;
+  */
+}
+.center {
+  display: flex;
+}
