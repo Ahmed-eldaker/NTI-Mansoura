@@ -1,15 +1,77 @@
-let num1 = prompt("enter Value 1");
-let num2 = prompt("enter Value 2");
-let num3 = prompt("enter Value 3");
-let num4 = prompt("enter Value 4");
-let num5 = prompt("enter Value 5");
+// var x = 5;
 
-let arr = [];
-arr.push(num1, num2, num3, num4, num5);
-//Ascending Order
-let ascending = arr.toSorted();
-//Descending Order
-let descending = arr.toSorted().reverse();
+// // console.log(insideFunc);
+// var func = function () {
+//   var insideFunc = 12;
+//   console.log(x);
+// };
+// func();
 
-alert(`Sorted in ascending order: ${ascending.join(", ")}`);
-alert(`Sorted in descending order: ${descending.join(", ")}`);
+// console.log(x);
+// for (var index = 0; index < 5; index++) {
+//   console.log(index);
+// }
+// console.log("inside :", index);
+// ---------------
+// function b() {
+//   var myvar = 1;
+//   console.log(myvar);
+// }
+// console.log(x);
+// a();
+// b();
+// function a() {
+//   var myvar = 2;
+//   console.log(myvar);
+// }
+// var x = 5;
+// -----------------
+// function f1(x, y) {
+//   if (x > 3) {
+//     var z = 3;
+//   } else {
+//     var zz = 3;
+//   }
+//   console.log(z, zz);
+//   zzz = 300;
+// }
+// f1(4, 3);
+// alert(zzz);
+// -----------------
+// function b() {
+//   //   myvar;
+//   var myvar;
+//   console.log(myvar);
+// }
+// function a() {
+//   var myvar = 2;
+//   console.log(myvar);
+//   b();
+// }
+// var myvar = 1;
+// console.log(myvar);
+// a();
+// console.log(myvar);
+// *--------------
+// function b() {
+//   //   var myvar;
+//   console.log(myvar);
+// }
+// function a() {
+//   var myvar = 2;
+//   console.log(myvar);
+//   b();
+// }
+// a();
+// console.log(myvar);
+// -------------------------
+function a() {
+  function b() {
+    console.log(myvar);
+  }
+  var myvar = 2;
+  console.log(myvar);
+  b();
+}
+a();
+console.log(myvar);
