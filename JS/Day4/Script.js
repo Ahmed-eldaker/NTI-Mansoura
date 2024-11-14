@@ -39,3 +39,7 @@
 //   console.log(argArr.reverse());
 // }
 // reverseFunc(1, 2, 3, 4, 5);
+// --------------------------
+// console.log(document.URL);
+// console.log(location.href);
+// location.href = "https://www.google.com";
