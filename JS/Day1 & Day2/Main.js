@@ -29,14 +29,14 @@
 //   console.log("x smaller than y");
 // }
 
-// var color = "blue";
+var color = "blue";
 
 // switch (color) {
 //   case "red":
 //     console.log("red");
 //     break;
 //   case "blue":
-//     console.log("blue");
+console.log("blue");
 //     break;
 //   case "green":
 //     console.log("green");

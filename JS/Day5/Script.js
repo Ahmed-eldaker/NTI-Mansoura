@@ -39,7 +39,9 @@ var posts = () => {
     });
   });
 };
-// console.log(users());
+console.log(users());
+// console.log(x);
+
 // users().then(albums());
 
 // albums();
