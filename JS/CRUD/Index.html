@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+
+    <style>
+        .error {
+
+            margin: 0;
+
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main class="shadow gap-1 container d-flex justify-content-center flex-column align-items-center">
+
+        <h1>CRUD</h1>
+        <section class="w-75">
+            <label for="productName">productName :</label>
+            <input class="form-control" id="productName" type="text" placeholder="productName...">
+            <label for="productPrice">productPrice</label>
+            <input class="form-control" id="productPrice" type="text" min="100" placeholder="productPrice...">
+
+
+        </section>
+        <button id="add" class="mt-2 btn btn-success">ADD</button>
+        <p id="error" class="text-danger error">Please enter a valid data</p>
+        <input id="search" onkeyup="searchProduct()" type="text" placeholder="search" class=" mb-2 form-control">
+    </main>
+    <table class="table w-75 m-auto">
+        <thead class="table-primary">
+            <th>id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+        <tbody id="productRow">
+
+        </tbody>
+    </table>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="Script.js"></script>
+</body>
+
+</html>
