@@ -53,8 +53,12 @@ const add = document.getElementById("add");
 const search = document.getElementById("search");
 const productRow = document.getElementById("productRow");
 const error = document.getElementById("error");
-const allProducts = [];
+let allProducts = [];
 let myIndex;
+if (localStorage.getItem("allProducts")) {
+  allProducts = JSON.parse(localStorage.getItem("allProducts"));
+  displayProduct();
+}
 add.addEventListener("click", () => {
   if (productName.value && productPrice.value) {
     if (add.innerText == "ADD") {
@@ -65,6 +69,7 @@ add.addEventListener("click", () => {
       allProducts.push(product);
       error.style.visibility = "hidden";
       displayProduct();
+      localStorage.setItem("allProducts", JSON.stringify(allProducts));
       clearData();
     } else {
       allProducts[myIndex].name = productName.value;
@@ -99,7 +104,7 @@ let searchProduct = () => {
 };
 search.addEventListener("keyup", searchProduct);
 
-let displayProduct = () => {
+function displayProduct() {
   productRow.innerHTML = "";
   for (let i = 0; i < allProducts.length; i++) {
     productRow.innerHTML += `
@@ -116,7 +121,7 @@ let displayProduct = () => {
    </tr>`;
   }
   //   productRow.innerHTML = cartona;
-};
+}
 
 // validationName = () => {
 //     regx
@@ -127,6 +132,7 @@ let clearData = () => {
 };
 let deleteProduct = (i) => {
   allProducts.splice(i, 1);
+  localStorage.setItem("allProducts", JSON.stringify(allProducts));
   displayProduct();
   clearData();
 };
