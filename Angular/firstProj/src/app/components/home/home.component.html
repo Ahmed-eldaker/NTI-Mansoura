@@ -35,4 +35,13 @@
         </div>
         }
     </div>
+    <button #hover>Show Data</button>
+    <!-- <p #hamada>show more data</p> -->
+    @defer( on viewport(hover)){
+    <app-recom-data></app-recom-data>
+    }@placeholder(minimum 3s) {
+    <p>waiting...</p>
+    }
 </section>
+
+<app-parent class="mt-5"></app-parent>
