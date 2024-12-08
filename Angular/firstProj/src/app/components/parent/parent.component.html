@@ -1,5 +1,12 @@
 <p>parent works!</p>
 <!-- <ng-content select="img" /> -->
+<!-- <div class=" text-center bg-orange-900 w-32" appCustomDir>hello</div>
+<div class="bg-slate-800" appCustomDir>test</div> -->
 
+<ul>
+    @for(name of namesArr ;track $index){
+    <li class="p-3 bg-slate-500 mt-2">{{name}}</li>
 
-<app-child [dataChild]="dataParent"></app-child>
+    }
+</ul>
+<!-- <app-child [dataChild]="dataParent"></app-child> -->

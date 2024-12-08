@@ -5,6 +5,7 @@ import { IProduct } from '../../Interfaces/iproduct';
 import { FoodComponent } from "../food/food.component";
 import { RecomDataComponent } from "../recom-data/recom-data.component";
 import { ParentComponent } from "../parent/parent.component";
+import { CustomDirDirective } from '../../custom/custom-dir.directive';
 // import { IProduct } from '../../Interfaces/iproduct';
 // import { log } from 'console';
 
@@ -13,7 +14,7 @@ import { ParentComponent } from "../parent/parent.component";
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RecomDataComponent, ParentComponent],
+  imports: [CommonModule, RecomDataComponent, ParentComponent,CustomDirDirective],
 templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
