@@ -11,5 +11,6 @@ import { ParentComponent } from "./components/parent/parent.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  tokenUser:string=""
   title = 'firstProj';
 }

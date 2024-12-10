@@ -2,6 +2,7 @@ import { Component, ContentChild, inject, OnInit } from '@angular/core';
 import { ChildComponent } from "../child/child.component";
 import { CustomDirDirective } from '../../custom/custom-dir.directive';
 import { MyServiceService } from '../../services/my-service.service';
+import { UsersService } from './../../services/users.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -17,7 +18,7 @@ export class ParentComponent implements OnInit {
   namesArr!:string[]
   arr:number[]=[]
   
-  // constructor(myService:MyServiceService){
+  // constructor(_myService:MyServiceService){
     constructor(){
     let data=inject(MyServiceService)
     // let data=new MyServiceService()
@@ -27,8 +28,15 @@ export class ParentComponent implements OnInit {
       // );
       
     }
-    
+    data=inject(UsersService)
     ngOnInit(){
+      this.data.getUsers().subscribe({
+        next:(res)=>{console.log(res);
+        },
+        error:(err)=>{console.log(err);
+        },
+      })
+      
     let observableEx=new Observable((observers)=>{
       observers.next(1)
       observers.next(4)
@@ -45,7 +53,7 @@ console.log(this.arr);
       console.log("promise");
       
     })
-    console.log(promiseEx);
+  
     
     
   }
