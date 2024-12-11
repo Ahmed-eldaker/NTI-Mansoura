@@ -17,7 +17,7 @@ export const routes: Routes = [
    {path: 'home',component:HomeComponent,canActivate:[loginGardGuard]},
    {path:'about',component:AboutComponent,canActivate:[loginGardGuard]},
    {path:'contact',component:ContactComponent,canActivate:[loginGardGuard]},
-   {path:'gallery',component:GallaryComponent,children:[
+   {path:'gallery',component:GallaryComponent,canActivate:[loginGardGuard],children:[
       {path:'animals',component:AnimalsComponent},
       {path:'food',component:FoodComponent},
       {path:'flowers',component:FlowersComponent}

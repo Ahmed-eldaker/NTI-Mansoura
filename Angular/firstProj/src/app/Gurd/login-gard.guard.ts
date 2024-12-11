@@ -5,7 +5,7 @@ import { TokenService } from '../services/token.service';
 export const loginGardGuard: CanActivateFn = (route, state) => {
   const _tokenServices=inject(TokenService)
   const _router=inject(Router)
-    if(_tokenServices.token){
+    if(_tokenServices.token !== null){
       return true
     }else{
 _router.navigate(['/signup'])
